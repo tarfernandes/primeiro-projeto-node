@@ -2,10 +2,11 @@ import { Router } from 'express';
 import { startOfHour, parseISO } from 'date-fns';
 
 import AppointmentsRepository from '../repositories/AppointmentsRepository';
-import Appointment from '../models/Appointment';
 
 const appointmentsRouter = Router();
 const appointmentsRepository = new AppointmentsRepository();
+
+// SoC: Separation of Concerns (Separação de preocupações)
 
 appointmentsRouter.get('/', (request, response) => {
   const appointments = appointmentsRepository.all();
