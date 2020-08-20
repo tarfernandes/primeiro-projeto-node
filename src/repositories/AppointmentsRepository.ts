@@ -8,7 +8,7 @@ class AppointmentsRepository {
     this.appointments = [];
   }
 
-  public all() {
+  public all(): Appointment[] {
     return this.appointments;
   }
 
@@ -21,7 +21,7 @@ class AppointmentsRepository {
   }
 
   public create(provider: string, date: Date): Appointment {
-    const appointment = new appointment(provider, date);
+    const appointment = new Appointment(provider, date);
 
     this.appointments.push(appointment);
 
