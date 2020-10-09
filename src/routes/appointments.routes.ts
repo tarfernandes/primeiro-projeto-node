@@ -6,9 +6,6 @@ import AppointmentsRepository from '../repositories/AppointmentsRepository';
 const appointmentsRouter = Router();
 const appointmentsRepository = new AppointmentsRepository();
 
-// SoC: Separation of Concerns (Separação de preocupações)
-// DTO: data Transfer Object
-
 appointmentsRouter.get('/', (request, response) => {
   const appointments = appointmentsRepository.all();
 

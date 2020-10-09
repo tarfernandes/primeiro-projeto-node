@@ -1,10 +1,5 @@
 import { uuid } from 'uuidv4';
-import { id } from 'date-fns/locale';
 
-interface AppointmentConstructor {
-  provider: string;
-  date: Date;
-}
 class Appointment {
   id: string;
 
